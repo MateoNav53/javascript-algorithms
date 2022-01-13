@@ -1,5 +1,14 @@
 export function houseNumbersSum(inputArray: number[]): number {
-
+    //add all the numbers until you see a zero
+    let total = 0
+    for(let i=0;i < inputArray.length;i++){
+        if(inputArray[i] >= 1){
+            total += inputArray[i]
+        } else {
+            break
+        }
+    }
+    return total
 }
 
-// console.log(houseNumbersSum([5, 1, 2, 3, 0, 1, 5, 0, 2]));
+console.log(houseNumbersSum([5, 1, 2, 3, 0, 1, 5, 0, 2]));
